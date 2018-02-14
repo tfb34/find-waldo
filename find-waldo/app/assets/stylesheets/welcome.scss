@@ -1,0 +1,18 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+	background-color: rgb(118, 167, 227);
+}
+
+.photo-option{
+	width: 30%;
+	cursor: pointer;
+	height: 20vw;
+}
+.photo-option:hover{
+	width: 31%;
+	height:21vw;
+	border:5px solid grey;
+}
