@@ -14,15 +14,19 @@ ActiveRecord::Schema.define(version: 20180214235506) do
 
   create_table "characters", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "photograph_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["photograph_id"], name: "index_characters_on_photograph_id"
   end
 
   create_table "coordinates", force: :cascade do |t|
+    t.integer  "character_id"
     t.integer  "col"
     t.integer  "row"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["character_id"], name: "index_coordinates_on_character_id"
   end
 
   create_table "photographs", force: :cascade do |t|
