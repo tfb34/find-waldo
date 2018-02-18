@@ -1,0 +1,33 @@
+<h1>Photographs#show</h1>
+<p>Find me in app/views/photographs/show.html.erb</p>
+
+<p><%=@photograph.title%></p>
+
+<div id="zoom-wrapper">
+	<span>Zoom</span>
+	<div class="zoom-btns">
+		<div id="minus-btn" class="zoom-btn" style="width:50%"><p>&minus;</p></div>
+		<div id="plus-btn" class="zoom-btn" style="width:50%"><p>&plus;</p></div>
+	</div>
+</div>
+
+
+<div id="photograph-wrapper">
+    <div class="choose-character-menu">
+        <input type="hidden" id="x" name="x" value="">
+        <input type="hidden" id="y" name="y" value="">
+        <p>Which character did you find?</p>
+        <%@photograph.characters.each do |character|%>
+            <p class="option" id=<%=character.id%> ><%=character.name%></p>
+        <%end%>
+
+    </div>
+    <img src= <%= asset_path @photograph.title%> id="photograph">
+</div>
+
+<!--here you will obtain all the characters and create a menu-->
+<!--what happens when user clicks on character name?
+    need character name, and coordinates. right now how do you get coordinates?
+    add this coordinates to the id of the menu.
+    the id must be constant. not changing 
+-->

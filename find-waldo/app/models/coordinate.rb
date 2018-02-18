@@ -6,5 +6,8 @@ class Coordinate < ApplicationRecord
 	validates :row, presence: true, numericality: { only_integer: true,
                                                     greater_than_or_equal_to: 0}
 
+    def getCoordStr()
+    	return "#{row},#{col}"
+    end
 
 end

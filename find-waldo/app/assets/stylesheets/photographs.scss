@@ -1,0 +1,66 @@
+// Place all the styles related to the Photographs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#photograph{
+	width: 1024px;
+	height: 800px;
+	
+}
+.zoom-btns{
+	width: 5em;
+}
+.zoom-btn p{
+	margin:0;
+}
+.zoom-btns::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.zoom-btn{
+	float: left;
+	width:50%;
+	text-align:center;
+	cursor: pointer;
+}
+
+#minus-btn{
+	background-color: grey;
+	border-radius: 50px 15px 5px 30px;
+	box-sizing: border-box;
+
+}
+
+#plus-btn{
+	background-color: rgb(244, 166, 9);
+	box-sizing: border-box;
+	border-radius: 15px 50px 30px 5px;
+}
+#zoom-wrapper{
+	margin-bottom: 1em;
+}
+.choose-character-menu{
+	position:absolute;
+	color:white;
+	top: 0;
+	left:50px;
+	visibility: hidden;
+	background-color:rgba(1,2,3,0.5);
+	padding:1em;
+	border-radius:10px;
+
+}
+.choose-character-menu p{
+	margin:0;padding:0;
+	font-size:14px;
+}
+.option:hover{
+	background-color:rgba(1,2,3,0.8);
+	cursor:pointer;
+}
+#photograph-wrapper{
+	position:relative;
+}
+

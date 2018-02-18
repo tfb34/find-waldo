@@ -1,0 +1,12 @@
+
+<% @photographs.each do |photograph| %>
+    <%= link_to photograph_path(photograph.id), method: :get do %>
+    	<%= image_tag asset_path(photograph.title), class: "photo-option" %>
+    <% end %>
+<% end %>
+
+
+
+
+
+

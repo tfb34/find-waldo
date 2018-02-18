@@ -1,6 +1,6 @@
 <h1>Welcome#index</h1>
 <p>Find me in app/views/welcome/index.html.erb</p>
 <h2>Choose a photograph to begin.</h2>
-<img src = <%= asset_path 'photograph-easy.jpg'%> class="photo-option">
-<img src = <%= asset_path 'photograph-medium.jpg'%> class="photo-option">
-<img src= <%= asset_path 'photograph-hard.jpg'%> class="photo-option">
+
+<%= render('photographs/index')%>
+

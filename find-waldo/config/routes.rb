@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  #get 'photographs/show'
+  resources :photographs, only: [:show, :index]
   get 'welcome/index'
 
   #get '/characters/:id',  to: 'characters#show'
