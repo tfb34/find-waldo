@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numOfCharacters: 1
+  numOfFinds: 1
+  score: 1
+
+two:
+  numOfCharacters: 1
+  numOfFinds: 1
+  score: 1
