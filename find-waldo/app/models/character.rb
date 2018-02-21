@@ -3,6 +3,7 @@ class Character < ApplicationRecord
 	belongs_to :photograph
 	validates :name, presence: true
 
+
 	def getCoordStr()
 		str = ""
 		if(coordinates)
@@ -12,5 +13,43 @@ class Character < ApplicationRecord
 		end
 		return str
 
+	end
+
+	def getX1()
+		if(c = coordinates.first)
+			return c[0];
+		end
+	end
+
+	def getX2()
+		if(c = coordinates.last)
+			return c[0];
+		end
+	end
+
+	def getY1()
+		if(c = coordinates.first)
+			return c[1];
+		end
+	end
+
+	def getY2()
+		if(c = coordinates.last)
+			return c[1];
+		end
+	end
+
+	def getImageSrc()
+
+		if(name === "waldo")
+			src = "waldo.jpg"
+		elsif name === "wanda"
+			src = "wanda.jpeg"
+		elsif name === "odlaw"
+			src = "odlaw.jpg"
+		else
+			src = "wizard.jpeg"
+		end
+		return src
 	end
 end

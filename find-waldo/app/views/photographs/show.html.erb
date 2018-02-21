@@ -1,8 +1,3 @@
-<h1>Photographs#show</h1>
-<p>Find me in app/views/photographs/show.html.erb</p>
-
-<p><%=@photograph.title%></p>
-
 <div id="zoom-wrapper">
 	<span>Zoom</span>
 	<div class="zoom-btns">
@@ -14,16 +9,29 @@
 
 <div id="photograph-wrapper">
     <div class="choose-character-menu">
-        <input type="hidden" id="x" name="x" value="">
-        <input type="hidden" id="y" name="y" value="">
+
         <p>Which character did you find?</p>
         <%@photograph.characters.each do |character|%>
-            <p class="option" id=<%=character.id%> ><%=character.name%></p>
+            <p class="option" id=<%=character.id%> onclick="isFound(this.id)" ><%=character.name%></p>
         <%end%>
 
     </div>
     <img src= <%= asset_path @photograph.title%> id="photograph">
 </div>
+
+<!--side-content-->
+<div id="side-content">
+    <% @photograph.characters.each do |character|%>
+        <%= image_tag asset_path(character.getImageSrc()), class: "character-photo", id: character.name%>
+    <%end%>
+</div>
+<%=form_for @user, :remote => true do |f|%>
+    <input type="hidden" id="x" name="x" value="">
+    <input type="hidden" id="y" name="y" value="">
+    <input type="hidden" id="offsetX" name="offsetX" value="">
+    <input type="hidden" id="offsetY" name="offsetY" value="">
+    <input type="hidden" id="character_id" name="character_id" value="">
+<%end%>
 
 <!--here you will obtain all the characters and create a menu-->
 <!--what happens when user clicks on character name?

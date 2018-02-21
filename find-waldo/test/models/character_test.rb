@@ -20,11 +20,19 @@ class CharacterTest < ActiveSupport::TestCase
   end
 
   test "should return coordinates as a single string" do
+
     @character.coordinates.build(col: 587, row: 430)
     @character.coordinates.build(col: 635, row: 455)
 
     str = @character.getCoordStr()
     assert_equal "430,587,455,635", str
+  end
+
+  test "getX1 should return 255" do 
+    @character.coordinates.build(col: 255, row: 430)
+    @character.coordinates.build(col: 635, row: 455)
+    puts @character.coordinates
+    assert_equal 255, @character.getX1()
   end
 
 end
