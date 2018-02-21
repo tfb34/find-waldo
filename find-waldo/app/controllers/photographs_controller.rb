@@ -6,6 +6,7 @@ class PhotographsController < ApplicationController
 
   def show
   	@photograph = Photograph.find(params[:id])
-  	@user = @photograph.users.create(charactersFound: @photograph.characters.count)
+  	#@user = @photograph.users.create(charactersFound: @photograph.characters.count)
+  	@game = Game.create(numOfCharacters: @photograph.characters, numOfFinds: 0, score: 0)
   end
 end
