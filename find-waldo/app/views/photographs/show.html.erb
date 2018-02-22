@@ -26,13 +26,16 @@
     <%end%>
 </div>
 <!--always to create action-->
-<input type="hidden" id="x" name="x" value="">
+
+<%=form_for(@game.moves.build, remote: true) do |f|%>
+    <input type="hidden" id="x" name="x" value="">
     <input type="hidden" id="y" name="y" value="">
     <input type="hidden" id="offsetX" name="offsetX" value="">
     <input type="hidden" id="offsetY" name="offsetY" value="">
     <input type="hidden" id="character_id" name="character_id" value="">
-<%=form_tag(controller: "moves", action: "create", method: "post", remote: true) do%>
-    
+    <%= button_tag(type: "submit") do%>
+
+  <%end%>
 <%end%>
 
 <!--here you will obtain all the characters and create a menu-->
