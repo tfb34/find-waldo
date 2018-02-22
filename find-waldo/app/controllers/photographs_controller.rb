@@ -8,5 +8,6 @@ class PhotographsController < ApplicationController
   	@photograph = Photograph.find(params[:id])
   	#@user = @photograph.users.create(charactersFound: @photograph.characters.count)
   	@game = Game.create(numOfCharacters: @photograph.characters.count, numOfFinds: 0, score: 0)
+  	
   end
 end

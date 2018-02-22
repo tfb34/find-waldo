@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  get 'users/new'
-
-  get 'user/new'
+ 
 
   #get 'photographs/show'
   resources :photographs, only: [:show, :index]
   resources :users
   get 'welcome/index'
+
+  resources :moves, only: [:create]
 
   #get '/characters/:id',  to: 'characters#show'
 
