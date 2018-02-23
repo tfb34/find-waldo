@@ -30,10 +30,8 @@
 <%=form_for(@game.moves.build, remote: true) do |f|%>
     <input type="hidden" id="x" name="x" value="">
     <input type="hidden" id="y" name="y" value="">
-    <input type="hidden" id="offsetX" name="offsetX" value="">
-    <input type="hidden" id="offsetY" name="offsetY" value="">
     <input type="hidden" id="character_id" name="character_id" value="">
-    <%= button_tag(type: "submit") do%>
+    <%= button_tag(type: "submit", id: "submitBtn", style: "display:none") do%>
 
   <%end%>
 <%end%>

@@ -48,16 +48,19 @@ function showMenu(menu, x, y, xOffset, yOffset){// menu is
     menu.style.top = (y-200)+"px";
     document.getElementById('x').value = x;
     document.getElementById('y').value = y;
-    document.getElementById('offsetX').value = xOffset;
-    document.getElementById('offsetY').value = yOffset;
+    //document.getElementById('offsetX').value = xOffset;
+    //document.getElementById('offsetY').value = yOffset;
     //menu.setAttribute("id", )
     //where? top, left, absolute position, photo wrapper relative
 }
 
 function isFound(characterID){
     document.getElementById('character_id').value = characterID;
-    let form = document.getElementsByTagName('form')[0];
-    form.submit();
+    let submitBtn = document.getElementById('submitBtn');
+    submitBtn.click();
+    //let form = document.getElementsByTagName('form')[0];
+
+    //form.submit();
 }
 
 function setupPhotograph(){

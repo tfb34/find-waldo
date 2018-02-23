@@ -1,1 +1,13 @@
-console.log("hello")
+if(<%=@characterFound%>){
+$("#<%=@character.name%>").css("border", "5px solid grey");
+let rectangle = document.createElement('div');
+rectangle.setAttribute("class","rectangle");// position:absolute, background-color: rgba(1,2,3,0.5),
+document.getElementsByTagName('body')[0].appendChild(rectangle);
+rectangle.style.top = "<%=@top%>px";
+rectangle.style.left = "<%=@left%>px";
+rectangle.style.width = "<%=@rectWidth%>px";
+rectangle.style.height = "<%=@rectHeight%>px";
+}
+//$(".choose-character-menu").css("visibility: hidden");
+document.getElementsByClassName("choose-character-menu")[0].style.visibility = "hidden"
+console.log("<%=@characterFound%>");

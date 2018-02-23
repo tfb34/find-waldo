@@ -68,12 +68,16 @@
 	width: 50px;
     height: 800px;
     background-color: black;
-    position: absolute;
+    position: fixed;
     margin-left: 1050px;
     top: 55px;
 }
 .character-photo{
 	width: 90px;
 	height: 190px;
-	border: 5px solid grey;
+	border: 5px solid red;
+}
+.rectangle{
+	position:absolute;
+	background-color: rgba(1,2,3,0.5);
 }
