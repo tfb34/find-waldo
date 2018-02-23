@@ -67,8 +67,8 @@
 #side-content{
 	width: 50px;
     height: 800px;
-    background-color: black;
-    position: fixed;
+   
+    position: absolute;
     margin-left: 1050px;
     top: 55px;
 }
@@ -95,10 +95,15 @@
 	margin-bottom: 10px;
 }
 .character-photo-name{
-	color: blue;
 	position: absolute;
 	left: 25px;
+	-ms-transform: rotate(-10deg);
     -webkit-transform: rotate(-10deg);
     -moz-transform: rotate(-10deg);
+    transform: rotate(-10deg);
 	top: 8px;
+
+	font-size: 18px;
+	font-family: 'Gloria Hallelujah', cursive;
+	color: black
 }
