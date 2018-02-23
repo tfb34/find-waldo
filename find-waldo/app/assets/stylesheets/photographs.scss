@@ -72,12 +72,33 @@
     margin-left: 1050px;
     top: 55px;
 }
+#side-content::after{
+	content:"";
+	display:table;
+	clear:both;
+}
 .character-photo{
-	width: 90px;
-	height: 190px;
+	width: 95px;
+	height: 180px;
 	border: 5px solid red;
+	padding-top: 25px;
 }
 .rectangle{
 	position:absolute;
 	background-color: rgba(1,2,3,0.5);
+}
+.character-photo-wrapper{
+	position: relative;
+	width: 100px;
+	background-color: white;
+	height: 210px;
+	margin-bottom: 10px;
+}
+.character-photo-name{
+	color: blue;
+	position: absolute;
+	left: 25px;
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+	top: 8px;
 }
