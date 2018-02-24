@@ -1,13 +1,27 @@
+let msg = document.getElementById('feedback');
+msg.style.top = "<%=@y%>px";
+msg.style.left = "<%=@x%>px";
+msg.style.display = "block";
+
+
 if(<%=@characterFound%>){
-$("#<%=@character.name%>").css("border", "5px solid grey");
-let rectangle = document.createElement('div');
-rectangle.setAttribute("class","rectangle");// position:absolute, background-color: rgba(1,2,3,0.5),
-document.getElementsByTagName('body')[0].appendChild(rectangle);
-rectangle.style.top = "<%=@top%>px";
-rectangle.style.left = "<%=@left%>px";
-rectangle.style.width = "<%=@rectWidth%>px";
-rectangle.style.height = "<%=@rectHeight%>px";
+    console.log("characterFound");
+    $("#<%=@character.name%>").css("border", "5px solid grey");
+    let rectangle = document.createElement('div');
+    rectangle.setAttribute("class","rectangle");// position:absolute, background-color: rgba(1,2,3,0.5),
+    document.getElementsByTagName('body')[0].appendChild(rectangle);
+    rectangle.style.top = "<%=@top%>px";
+    rectangle.style.left = "<%=@left%>px";
+    rectangle.style.width = "<%=@rectWidth%>px";
+    rectangle.style.height = "<%=@rectHeight%>px";
+    msg.innerHTML = "You found <%=@character.name%>!";
+    msg.setAttribute('class', 'correct');
+}else{
+    console.log("character Not Found");
+    msg.innerHTML = "Try again";
+    msg.setAttribute('class','wrong');
+    console.log(msg);
 }
-//$(".choose-character-menu").css("visibility: hidden");
 document.getElementsByClassName("choose-character-menu")[0].style.visibility = "hidden"
-console.log("<%=@characterFound%>");
+console.log("hello");
+//document.getElementsByClassName("choose-character-menu")[0].style.visibility = "hidden"

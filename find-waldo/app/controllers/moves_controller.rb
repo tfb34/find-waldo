@@ -10,7 +10,8 @@ class MovesController < ApplicationController
         x = params[:x].to_i
         y = params[:y].to_i
         @characterFound = false
-
+        @x = x+12;
+        @y = y;
         if(x >= x1 && x <= x2 && y >= y1 && y<=y2)
             @rectWidth = (x1-x2).abs
             @rectHeight = (y1-y2).abs
