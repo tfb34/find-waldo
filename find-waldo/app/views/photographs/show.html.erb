@@ -6,6 +6,12 @@
 	</div>
 </div>
 
+<div id="player-form">
+    <%=form_for @photograph.users.build do |f|%>
+        Player Name: <%=f.text_field :name%>
+        <%= f.submit %>
+    <%end%>
+</div>
 
 <div id="photograph-wrapper">
     <div class="choose-character-menu">
@@ -17,6 +23,7 @@
 
     </div>
     <img src= <%= asset_path @photograph.title%> id="photograph">
+    <div id="cover-photograph"></div>
 </div>
 
 <!--side-content-->

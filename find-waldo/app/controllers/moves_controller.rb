@@ -18,11 +18,11 @@ class MovesController < ApplicationController
             @top = [y1,y2].min
             @left = [x1,x2].min
             @characterFound = true
-            Game.last.numOfFinds += 1
+            Game.last.foundCharacter()
+
         end
-        #add javascript here to change the border of caught character
+        #if num of finds  == totalCharacters stop game, disable user from clicking on the board
         respond_to do |format|
-             
              format.js 
         end
 	end

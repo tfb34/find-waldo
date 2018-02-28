@@ -62,6 +62,16 @@ function isFound(characterID){
 
     //form.submit();
 }
+function disableGame(){
+    let cover = document.getElementById('cover-photograph');
+    cover.style.display = "block";
+}
+
+function enableGame(){
+    let cover = document.getElementById('cover-photograph');
+    cover.style.display = "none";
+}
+
 
 function setupPhotograph(){
     console.log("stuff");

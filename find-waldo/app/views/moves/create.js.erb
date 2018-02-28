@@ -3,7 +3,6 @@ msg.style.top = "<%=@y%>px";
 msg.style.left = "<%=@x%>px";
 msg.style.display = "block";
 
-
 if(<%=@characterFound%>){
     console.log("characterFound");
     $("#<%=@character.name%>").css("border", "5px solid grey");
@@ -24,4 +23,9 @@ if(<%=@characterFound%>){
 }
 document.getElementsByClassName("choose-character-menu")[0].style.visibility = "hidden"
 console.log("hello");
+
+ if(<%=Game.last.isGameOver%>){
+    disableGame();
+    // Show new player form 
+}
 //document.getElementsByClassName("choose-character-menu")[0].style.visibility = "hidden"
