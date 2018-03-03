@@ -65,6 +65,31 @@ function isFound(characterID){
 function disableGame(){
     let cover = document.getElementById('cover-photograph');
     cover.style.display = "block";
+    //show time now in console.log
+}
+
+function getScore(){//sec
+    let endTime = new Date().getTime();
+    let duration = (endTime - startTime)/1000;
+    let hrs = parseInt(duration/3600);
+    duration -= hrs*3600;
+    let mins = parseInt(duration/60);
+    duration -= mins*60;
+
+    let score = hrs+":"+mins+":"+parseInt(duration);
+    console.log(score);
+    return score;
+    //console.log("hrs: "+hrs+" mins: "+mins+" secs: "+duration);
+
+}
+
+function renderPlayerForm(){
+    let score = getScore();
+    document.getElementById('player-form').style.display = "block";
+    document.getElementById('playerScore').innerHTML=score;
+    document.getElementById('user_score').value = score;
+
+
 }
 
 function enableGame(){
@@ -84,8 +109,9 @@ function setupPhotograph(){
 }
 // this won't work , you have to check in server.
 // pass form with hidden values and character id
-
+let startTime;
 
 window.onload = function(){
-	setupPhotograph()
+	setupPhotograph();
+    startTime = new Date().getTime();
 }

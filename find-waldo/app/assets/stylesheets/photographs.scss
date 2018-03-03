@@ -132,8 +132,21 @@
 }
 #player-form{
 	position: absolute;
-	top:100px;
-	left:500px;
-	background-color:beige;
-	z-index:3;
+	top: 100px;
+	left: 400px;
+	background-color: beige;
+	z-index: 3;
+	padding: 2em;
+	border-radius: 10px;
+	display:none;
+}
+#player-form p{
+	text-align: center;
+}
+#player-form #header{
+	color:red;
+	font-size: 2em;
+}
+#playerScore{
+	color:green;
 }

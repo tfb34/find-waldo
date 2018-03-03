@@ -6,12 +6,7 @@
 	</div>
 </div>
 
-<div id="player-form">
-    <%=form_for @photograph.users.build do |f|%>
-        Player Name: <%=f.text_field :name%>
-        <%= f.submit %>
-    <%end%>
-</div>
+<%=render partial: "users/new"%>
 
 <div id="photograph-wrapper">
     <div class="choose-character-menu">
