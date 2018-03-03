@@ -2,7 +2,7 @@ class UsersController < ApplicationController
     #all high ranks of particular photograph
     def index
         @photograph = Photograph.find(User.last.photograph_id)
-        @users = @photograph.getTopScorers()
+        @users = @photograph.getTopPlayers(10)
     end
 
 	def new
@@ -12,8 +12,7 @@ class UsersController < ApplicationController
         @user = User.create(user_params)
         #@photograph = Photograph.find(params[:photo_id]);
         #@user = @photograph.users.create(charactersFound: @photograph.characters.count)
-        @user.save
-        redirec_to 
+        redirect_to users_path
     end
 end
 

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   #get 'photographs/show'
   resources :photographs, only: [:show, :index]
-  resources :users
+  resources :users, only: [:index,:new,:create]
   get 'welcome/index'
 
   resources :moves, only: [:create]
