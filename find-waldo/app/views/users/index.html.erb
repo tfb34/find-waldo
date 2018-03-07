@@ -1,3 +1,26 @@
-This is the high score page
-You have @photograph and @users to create your high score page.
-Create a link to replay level
+<h1>Top 10 High Scores</h1>
+<h3>Level <%=@photograph.id%></h3>
+<div id="play_again_btn">
+<%= link_to 'Play Again', photograph_path(@photograph), method: :get%>
+</div>
+
+
+<table id="score_table">
+	<tr>
+		<th>Player</th>
+		<th>Best Time</th>
+	</tr>
+	<% @users.each do |user|%>
+		<% if(User.last.id == user.id)%>
+			<tr id="current_user">
+				<td><%=user.name%></td>
+				<td><%=user.getScoreStr()%></td>
+			</tr>
+		<%else%>
+			<tr>
+				<td><%=user.name%></td>
+				<td><%=user.getScoreStr()%></td>
+			</tr>
+		<%end%>
+	<%end%>
+</table>

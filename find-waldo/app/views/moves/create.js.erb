@@ -24,9 +24,19 @@ if(<%=@characterFound%>){
 document.getElementsByClassName("choose-character-menu")[0].style.visibility = "hidden"
 console.log("hello");
 
- if(<%=Game.last.isGameOver%>){
+if(<%=Game.last.isGameOver()%>){// 
+    let endTime = new Date().getTime();
+    let duration = (endTime - startTime)/1000;
+
     disableGame();
-    renderPlayerForm();
+    if(<%=@photograph.getTopPlayers().length%> < 10){
+        renderPlayerForm(duration);// if player score is > current top ten
+    }else if(<%=@photograph.getLastScore()%> > duration){
+        renderPlayerForm(duration);
+    }else{
+        renderCongrats(duration);
+    }
     // Show new player form 
 }
+
 //document.getElementsByClassName("choose-character-menu")[0].style.visibility = "hidden"

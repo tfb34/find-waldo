@@ -1,6 +1,7 @@
 <div id="player-form">
     <p id="header">New High Score</p>
-    <p>Your score is <span id="playerScore"></span></p>
+    <p>Congratulations! You found <%=@photograph.getCharacters()%> in</p>
+    <p><span id="playerScore"></span>.</p>
     <%=form_for @photograph.users.build do |f|%>
         <%=f.text_field :name, autofocus: true, maxlength: 25,width:10,placeholder: 'Player name'%>
         <%=f.hidden_field :score%>

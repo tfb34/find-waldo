@@ -2,7 +2,8 @@ class UsersController < ApplicationController
     #all high ranks of particular photograph
     def index
         @photograph = Photograph.find(User.last.photograph_id)
-        @users = @photograph.getTopPlayers(10)
+        @users = @photograph.getTopPlayers()
+        @latest_user = User.last
     end
 
 	def new

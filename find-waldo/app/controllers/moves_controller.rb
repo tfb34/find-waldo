@@ -1,8 +1,8 @@
 class MovesController < ApplicationController
     #using the params, check if found, update game(find-> last) if necessary
 	def create
-        
         @character = Character.find(params[:character_id])
+        @photograph = Photograph.find(params[:photo_id])
         x1 = @character.coordinates.first.col
         y1 = @character.coordinates.first.row
         x2 = @character.coordinates.last.col 
@@ -19,7 +19,6 @@ class MovesController < ApplicationController
             @left = [x1,x2].min
             @characterFound = true
             Game.last.foundCharacter()
-
         end
         #if num of finds  == totalCharacters stop game, disable user from clicking on the board
         respond_to do |format|

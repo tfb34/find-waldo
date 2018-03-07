@@ -48,10 +48,6 @@ function showMenu(menu, x, y, xOffset, yOffset){// menu is
     menu.style.top = (y-200)+"px";
     document.getElementById('x').value = x;
     document.getElementById('y').value = y;
-    //document.getElementById('offsetX').value = xOffset;
-    //document.getElementById('offsetY').value = yOffset;
-    //menu.setAttribute("id", )
-    //where? top, left, absolute position, photo wrapper relative
 }
 
 function isFound(characterID){
@@ -68,9 +64,8 @@ function disableGame(){
     //show time now in console.log
 }
 
-function getScore(){//sec
-    let endTime = new Date().getTime();
-    let duration = (endTime - startTime)/1000;
+// changes seconds to string
+function getScore(duration){//sec
     let hrs = parseInt(duration/3600);
     duration -= hrs*3600;
     let mins = parseInt(duration/60);
@@ -83,13 +78,50 @@ function getScore(){//sec
 
 }
 
-function renderPlayerForm(){
-    let score = getScore();
+function getScoreStr(duration){
+    let hrs = parseInt(duration/3600);
+    duration -= hrs*3600;
+    let mins = parseInt(duration/60);
+    duration -= mins*60;
+    let str='';
+    console.log(hrs);
+    if(hrs){
+        str = timeToStr(str,'hr',hrs);
+    }
+    if(mins){
+        str = timeToStr(str,'min',mins);
+    }
+    if(duration){
+        str = timeToStr(str,'sec',parseInt(duration));
+    }
+    return str;
+}
+
+function timeToStr(str, noun, value){
+    if(value>1){
+        str+=value+' '+noun+'s ';
+    }else{
+        str+=value+' '+noun+' ';
+    }
+    return str;
+}
+
+function renderPlayerForm(duration){
+    //let endTime = new Date().getTime();
+    // is endTime greater than the top ten
+    //let duration = (endTime - startTime)/1000;
+   // let scoreStr = getScore(duration);
     document.getElementById('player-form').style.display = "block";
-    document.getElementById('playerScore').innerHTML=score;
-    document.getElementById('user_score').value = score;
+    document.getElementById('playerScore').innerHTML=getScoreStr(duration);
+    document.getElementById('user_score').value = duration;
 
 
+}
+
+function renderCongrats(duration){
+    let congratsWrapper = document.getElementById('congrats-wrapper');
+    congratsWrapper.style.display = "block";
+    document.getElementById('score').innerHTML = getScoreStr(duration);
 }
 
 function enableGame(){
@@ -111,7 +143,9 @@ function setupPhotograph(){
 // pass form with hidden values and character id
 let startTime;
 
-window.onload = function(){
+window.onload = loadPage;
+
+function loadPage(){
 	setupPhotograph();
     startTime = new Date().getTime();
 }
