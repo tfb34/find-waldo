@@ -22,7 +22,10 @@ class Photograph < ApplicationRecord
 
 	def getLastScore()
 		topScorers = users.order(score: :asc).limit(10)
-		return topScorers.last.score
+		if(topScorers.length > 0)
+			return topScorers.last.score
+		end
+		return 0
 	end
 
 	def getCharacters()

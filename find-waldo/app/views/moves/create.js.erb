@@ -21,7 +21,7 @@ if(<%=@characterFound%>){
     msg.setAttribute('class','wrong');
     console.log(msg);
 }
-document.getElementsByClassName("choose-character-menu")[0].style.visibility = "hidden"
+document.getElementsByClassName("choose-character-menu")[0].style.display = "none"
 console.log("hello");
 
 if(<%=Game.last.isGameOver()%>){// 

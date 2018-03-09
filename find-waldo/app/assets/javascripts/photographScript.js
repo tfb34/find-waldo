@@ -29,7 +29,7 @@ function getMousePosition(event){
     console.log("minus offset=> "+"x:"+x1+" y:"+y1);
     let menu = document.getElementsByClassName('choose-character-menu')[0];
 
-    if(menu.style.visibility === "visible"){
+    if(menu.style.display === "block"){
         hideMenu(menu);
     }else{
         showMenu(menu, x, y, xOffset, yOffset);
@@ -38,12 +38,12 @@ function getMousePosition(event){
 }
 
 function hideMenu(menu){
-    menu.style.visibility = "hidden";
+    menu.style.display = "none";
 }
 
 function showMenu(menu, x, y, xOffset, yOffset){// menu is 
     
-    menu.style.visibility = "visible";
+    menu.style.display = "block";
     menu.style.left = x+"px";
     menu.style.top = (y-200)+"px";
     document.getElementById('x').value = x;
