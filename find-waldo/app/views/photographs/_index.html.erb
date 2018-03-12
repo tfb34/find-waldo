@@ -1,8 +1,11 @@
 <div class="all-photographs">
 <% @photographs.each do |photograph| %>
-    <%= link_to photograph_path(photograph.id), method: :get do %>
-    	<%= image_tag asset_path(photograph.title), class: "photo-option" %>
-    <% end %>
+	<div class="item">
+	    <%= link_to photograph_path(photograph.id), method: :get do %>
+	    	<%= image_tag asset_path(photograph.title), class: "photo-option" %>
+	    <% end %>
+	    <div class="item-overlay top"></div>
+	</div>
 <% end %>
 </div>
 

@@ -45,7 +45,7 @@ function showMenu(menu, x, y, xOffset, yOffset){// menu is
     
     menu.style.display = "block";
     menu.style.left = x+"px";
-    menu.style.top = (y-200)+"px";
+    menu.style.top = (y-100)+"px";
     document.getElementById('x').value = x;
     document.getElementById('y').value = y;
 }

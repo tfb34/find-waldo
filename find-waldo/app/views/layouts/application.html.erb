@@ -10,7 +10,12 @@
   </head>
 
   <body>
-    <div class="navbar"><%=link_to 'Find Waldo', welcome_index_path%></div>
+    <div class="navbar">
+      <%=link_to 'Find Waldo', welcome_index_path%>
+        <div class="box">
+        <div class="waldo"></div>
+        </div>
+    </div>
     <%= yield %>
   </body>
 </html>

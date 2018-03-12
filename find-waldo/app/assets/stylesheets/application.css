@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+.navbar{
+	display: -webkit-inline-flex;
+	display: inline-flex;
+}
