@@ -68,4 +68,23 @@ body{
 .instructions{
     margin-left:2.5em;
 }
-
+@media only screen and (max-width: 600px){
+    h1{
+        font-size:1em;
+    }
+    h2{
+        font-size: 12px;
+        background-color:#76A7E3;
+    }
+    .navbar a{
+        font-size:18px;
+    }
+    .navbar {
+    height: 2.8em;
+    }
+    .welcome{
+        margin:0;
+        padding-bottom:1em;
+        padding-top:2.5em;
+    }
+}
