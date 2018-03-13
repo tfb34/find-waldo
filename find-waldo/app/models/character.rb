@@ -41,14 +41,14 @@ class Character < ApplicationRecord
 
 	def getImageSrc()
 		src = ""
-		if(name === "waldo")
-			src = "waldo.jpg"
+		if name === "waldo"
+			src = "https://i.imgur.com/6xzy9Jl.jpg"
 		elsif name === "wenda"
-			src = "wenda.jpeg"
+			src = "https://i.imgur.com/ZpHmFJK.jpg"
 		elsif name === "odlaw"
-			src = "odlaw.jpg"
+			src = "https://i.imgur.com/BH5m2gS.jpg"
 		elsif name === "wizard"
-			src = "wizard.jpeg"
+			src = "https://i.imgur.com/dXEe10C.jpg"
 		end
 		return src
 	end

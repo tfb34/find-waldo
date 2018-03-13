@@ -1,7 +1,11 @@
-<h1>Top 10 High Scores</h1>
+<h1 class="welcome">Top 10 High Scores</h1>
 <h3>Level <%=@photograph.id%></h3>
 <div id="play_again_btn">
-<%= link_to 'Play Again', photograph_path(@photograph), method: :get%>
+<%if(photo=Photograph.find_by_id(@photograph.id+1))%>
+<%= link_to 'Next', photograph_path(photo), method: :get%>
+<%else%>
+<%= link_to 'Go to Main Page', welcome_index_path, method: :get%>
+<%end%>
 </div>
 
 

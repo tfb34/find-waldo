@@ -17,7 +17,6 @@ function getMousePosition(event){
 
     console.log("posx: "+posx,"posy: "+posy);
 
-    //return [event.clientX, event.clientY];
     let xOffset = Math.max(document.documentElement.scrollLeft, document.body.scrollLeft);
     let yOffset = Math.max(document.documentElement.scrollTop,document.body.scrollTop);
     console.log("clientx:"+event.clientX+" "+"clientY"+event.clientY);
@@ -34,7 +33,6 @@ function getMousePosition(event){
     }else{
         showMenu(menu, x, y, xOffset, yOffset);
     }
-    //alert(event.clientX+" "+x+" "+event.clientY+" "+y);
 }
 
 function hideMenu(menu){
@@ -54,9 +52,6 @@ function isFound(characterID){
     document.getElementById('character_id').value = characterID;
     let submitBtn = document.getElementById('submitBtn');
     submitBtn.click();
-    //let form = document.getElementsByTagName('form')[0];
-
-    //form.submit();
 }
 function disableGame(){
     let cover = document.getElementById('cover-photograph');
@@ -74,8 +69,6 @@ function getScore(duration){//sec
     let score = hrs+":"+mins+":"+parseInt(duration);
     console.log(score);
     return score;
-    //console.log("hrs: "+hrs+" mins: "+mins+" secs: "+duration);
-
 }
 
 function getScoreStr(duration){
@@ -107,15 +100,9 @@ function timeToStr(str, noun, value){
 }
 
 function renderPlayerForm(duration){
-    //let endTime = new Date().getTime();
-    // is endTime greater than the top ten
-    //let duration = (endTime - startTime)/1000;
-   // let scoreStr = getScore(duration);
     document.getElementById('player-form').style.display = "block";
     document.getElementById('playerScore').innerHTML=getScoreStr(duration);
     document.getElementById('user_score').value = duration;
-
-
 }
 
 function renderCongrats(duration){
@@ -139,8 +126,7 @@ function setupPhotograph(){
         console.log("no photo");
     }
 }
-// this won't work , you have to check in server.
-// pass form with hidden values and character id
+
 let startTime;
 
 window.onload = loadPage;

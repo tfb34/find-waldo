@@ -18,7 +18,7 @@
 <div id="side-content">
     <% @photograph.characters.each do |character|%>
         <div class="character-photo-wrapper">
-        <%= image_tag asset_path(character.getImageSrc()), class: "character-photo", id: character.name%>
+        <img src=<%=character.getImageSrc()%> class="character-photo" id=<%=character.name%>>
         <div class="character-photo-name"><%=character.name%></div>
         </div>
     <%end%>

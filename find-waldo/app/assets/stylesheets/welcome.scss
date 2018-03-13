@@ -32,7 +32,7 @@ body{
   transform: scale(1.1);
 }
 .waldo{
-    background: url(https://vignette.wikia.nocookie.net/waldo/images/3/35/Waldo.icon.png/revision/latest?cb=20071001194015);
+    background: url(https://i.imgur.com/2fRMQnl.png);
     width: 3em;
     height: 3em;
     background-size: contain;
@@ -64,5 +64,8 @@ body{
     z-index: 5; 
     position:relative;
     padding-top:1em;
+}
+.instructions{
+    margin-left:2.5em;
 }
 
