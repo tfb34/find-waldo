@@ -2,7 +2,8 @@
 
 function getMousePosition(event){
     let feedback = document.getElementById("feedback");
-    if(feedback.style.display === "block"){
+    let m= document.getElementsByClassName("choose-character-menu")[0];
+    if(feedback.style.display === "block" && m.style.display === "none"){
         feedback.style.display = "none";
     }
     var posx = 0;
