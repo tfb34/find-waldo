@@ -12,12 +12,15 @@
 
 ActiveRecord::Schema.define(version: 20180222053933) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "characters", force: :cascade do |t|
     t.string   "name"
     t.integer  "photograph_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.index ["photograph_id"], name: "index_characters_on_photograph_id"
+    t.index ["photograph_id"], name: "index_characters_on_photograph_id", using: :btree
   end
 
   create_table "coordinates", force: :cascade do |t|
@@ -26,7 +29,7 @@ ActiveRecord::Schema.define(version: 20180222053933) do
     t.integer  "row"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.index ["character_id"], name: "index_coordinates_on_character_id"
+    t.index ["character_id"], name: "index_coordinates_on_character_id", using: :btree
   end
 
   create_table "games", force: :cascade do |t|
@@ -41,7 +44,7 @@ ActiveRecord::Schema.define(version: 20180222053933) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "game_id"
-    t.index ["game_id"], name: "index_moves_on_game_id"
+    t.index ["game_id"], name: "index_moves_on_game_id", using: :btree
   end
 
   create_table "photographs", force: :cascade do |t|
@@ -57,7 +60,7 @@ ActiveRecord::Schema.define(version: 20180222053933) do
     t.integer  "photograph_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.index ["photograph_id"], name: "index_users_on_photograph_id"
+    t.index ["photograph_id"], name: "index_users_on_photograph_id", using: :btree
   end
 
 end
