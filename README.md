@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<h3>About</h3>
+<p>It's a rails web app that allows you to tag Waldo and his friends in a photograph. On the main page, you will be given a selection of photographs to choose from. The faster you find Waldo and his friends the higher your score. If you score high enough, your name will be requested to save your score.</p>
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<h3>Deployed</h3>
+<a href="https://adventures-of-waldo.herokuapp.com/">https://adventures-of-waldo.herokuapp.com/</a>
