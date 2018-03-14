@@ -1,6 +1,10 @@
 
 
 function getMousePosition(event){
+    let feedback = document.getElementById("feedback");
+    if(feedback.style.display === "block"){
+        feedback.style.display = "none";
+    }
     var posx = 0;
     var posy = 0;
     if (!event) var event = window.event;
