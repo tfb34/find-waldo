@@ -1,9 +1,10 @@
 # find-waldo
 
-It's a rails web app that allows you to tag Waldo and his friends in a photograph. On the main page, you will be given a selection of photographs to choose from. The faster you find Waldo and his friends the higher your score. If you score high enough, your name will be requested to save your score.
+Rails web app that allows you to tag Waldo and his friends in a photograph. On the main page, you will be given a selection of photographs to choose from. The faster you find Waldo and his friends the higher your score. If you score high enough, your name will be requested to save your score.
 
 ## Getting Started
-These instructions will get you a copy of the project up and running on your computer for development purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your computer for development and testing purposes.
+
 ### Prerequisites
 You will need to install the following if you haven't already
 <ul>
@@ -19,7 +20,7 @@ You will need to install the following if you haven't already
 ```
 $ git clone https://github.com/tfb34/find-waldo.git
 ```
-4. Run 'bundle install' to install missing gems.
+4. Run 'bundle install' to install missing gems :
 
 ```
 $ bundle install
@@ -37,8 +38,7 @@ $ sudo -i -u postgres
 postgres@server:~$ createdb find_waldo_development
 ```
 
-Exit the postgres account by typing exit.
-7. Modify the database by running 'rails db:migrate' in the terminal:
+7. Exit the postgres account by typing exit. Modify the database by running 'rails db:migrate' in the terminal:
 
 ```
 $ rails db:migrate
