@@ -33,7 +33,7 @@ class Photograph < ApplicationRecord
 		characters.each do |c|
 			arr.push(c.name.capitalize)
 		end
-		arr[arr.count-1] = 'and '+arr.last
+		arr[arr.count-1] = 'and '+arr.last unless arr.count ==1
 		return arr.join(', ')
 	end
 end
