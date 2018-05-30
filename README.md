@@ -8,9 +8,10 @@ These instructions will get you a copy of the project up and running on your com
 ### Prerequisites
 You will need to install the following if you haven't already
 <ul>
-	<li>Ruby</li>
-	<li>Rails</li>
-	<li>PostgresSQL</li>
+	<li>Linux OS. If you are using Windows, you'll have to install a Linux subsystem to setup Ruby on Rails.</li>
+	<li><a href="https://www.ruby-lang.org/en/documentation/installation/">Ruby</a></li>
+	<li><a href="https://www.tutorialspoint.com/ruby-on-rails/rails-installation.htm">Rails</a></li>
+	<li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04#create-a-new-database">PostgreSQL</a></li>
 </ul>
 
 ### Installing
