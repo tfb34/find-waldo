@@ -2,5 +2,63 @@
 
 It's a rails web app that allows you to tag Waldo and his friends in a photograph. On the main page, you will be given a selection of photographs to choose from. The faster you find Waldo and his friends the higher your score. If you score high enough, your name will be requested to save your score.
 
-<h3>Deployed</h3>
+## Getting Started
+These instructions will get you a copy of the project up and running on your computer for development purposes. See deployment for notes on how to deploy the project on a live system.
+### Prerequisites
+You will need to install the following if you haven't already
+<ul>
+	<li>Ruby</li>
+	<li>Rails</li>
+	<li>PostgresSQL</li>
+</ul>
+
+### Installing
+1. On Github, click on the <b>Clone or download</b> button and copy the URL.
+2. Open your terminal, and change the current working directory to the location you want the project in. 
+3. Type 'git clone' and paste the URL. Press Enter :
+```
+$ git clone https://github.com/tfb34/find-waldo.git
+```
+4. Run 'bundle install' to install missing gems.
+
+```
+$ bundle install
+```
+
+5. You must now create a new postgresql database. The PostgreSQL installation procedure creates a default user account called postgres. To use Postgres, you must log into that account by typing :
+
+```
+$ sudo -i -u postgres
+```
+
+6. Once you're logged in, type 'createdb find_waldo_development' and hit enter :
+
+```
+postgres@server:~$ createdb find_waldo_development
+```
+
+Exit the postgres account by typing exit.
+7. Modify the database by running 'rails db:migrate' in the terminal:
+
+```
+$ rails db:migrate
+```
+
+8. Populate the Database :
+
+```
+$ rails db:seed
+```
+
+9. Start the server to run the app :
+
+```
+$ rails s
+```
+
+10. Open your browser and go to http://localhost:3000
+
+## Deployment
 <a href="https://adventures-of-waldo.herokuapp.com/">https://adventures-of-waldo.herokuapp.com/</a>
+
+
