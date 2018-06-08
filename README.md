@@ -19,7 +19,7 @@ You will need to install the following if you haven't already
 2. Open your terminal, and change the current working directory to the location you want the project in. 
 3. Type 'git clone' and paste the URL. Press Enter :
 ```
-$ git clone https://github.com/tfb34/wheres-waldo.git
+$ git clone https://github.com/tfb34/find-waldo.git
 ```
 4. Run 'bundle install' to install missing gems :
 
