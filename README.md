@@ -1,4 +1,4 @@
-# find-waldo
+# Where's Waldo
 
 Rails web app that allows you to tag Waldo and his friends in a photograph. On the main page, you will be given a selection of photographs to choose from. The faster you find Waldo and his friends the higher your score. If you score high enough, your name will be requested to save your score.
 
@@ -19,7 +19,7 @@ You will need to install the following if you haven't already
 2. Open your terminal, and change the current working directory to the location you want the project in. 
 3. Type 'git clone' and paste the URL. Press Enter :
 ```
-$ git clone https://github.com/tfb34/find-waldo.git
+$ git clone https://github.com/tfb34/wheres-waldo.git
 ```
 4. Run 'bundle install' to install missing gems :
 
